@@ -1,0 +1,64 @@
+@import './icon'
+@import './reset'
+@import './mixin'
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
+  .border-bottom-1px
+    &::after
+      transform: scaleY(0.7)
+      -webkit-transform: scaleY(0.7)
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+  .border-bottom-1px
+    &::after
+      transform: scaleY(0.5)
+      -webkit-transform: scaleY(0.5)
+html,body
+  font-weight 500
+  width 100%
+  height 100%
+.box
+  padding 18px
+  margin-bottom 16px
+  background #fff
+  h2
+    font-size 14px
+    font-weight 700
+    color rgb(7, 17, 27)
+    line-height 14px
+.border-bottom-1px
+  border-bottom(1px, rgba(7, 17, 27, 0.2))
+
+.slide-fade-enter-active
+  transition all .2s ease
+.slide-fade-leave-active
+  transition all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+.slide-fade-enter, .slide-fade-leave-to
+  transform translateY(100px)
+  opacity 0
+
+.fade-enter-active
+  transition all .2s ease
+.fade-leave-active
+  transition all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+.fade-enter, .fade-leave-to
+  opacity 0
+
+.left-side-fade-enter-active
+  transition all .2s ease
+.left-side-fade-leave-active
+  transition all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+.left-side-fade-enter, .left-side-fade-leave-to
+  opacity 0
+  position absolute
+  transform translateX(100px)
+
+.list-complete-enter, .list-complete-leave-to
+  opacity 0
+  transform translateX(300px)
+.list-complete-leave-active
+  position: absolute;
+  width: 100%
+
+.component-fade-enter-active, .component-fade-leave-active
+  transition opacity .3s ease
+.component-fade-enter, .component-fade-leave-to
+  opacity 0
